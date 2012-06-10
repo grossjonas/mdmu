@@ -10,7 +10,7 @@ cd libnfc/
 ## Für die Benutzung mit gdb
 #autoreconf -vis && CFLAGS="-g -Wall -pedantic -O0 -ggdb" ./configure --prefix=/usr/local && make clean all && sudo make install
 ## Um traces zu beobachten
-autoreconf -vis && ./configure --prefix=/usr/local --enable-debug && make clean all && sudo make install
+autoreconf -vis && ./configure --prefix=/usr/local --enable-debug --with-drivers='all' && make clean all && sudo make install
 #autoreconf -vis && ./configure --prefix=/usr/local --disable-debug && make && sudo make install
 
 cd ..
