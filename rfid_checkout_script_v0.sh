@@ -7,7 +7,7 @@ baseDir="nfclibs"
 mkdir -p ${baseDir}
 cd "${workingDir}/${baseDir}"
 
-for lib in libnfc nfc-tools libndef mfcuk mtools
+for lib in nfc-tools libndef mfcuk mtools
 do
 	tmpDir="${workingDir}/${baseDir}/${lib}"
 	if [[ ! -d ${tmpDir} ]]
@@ -19,7 +19,7 @@ do
 	fi
 done
 
-for lib in libfreefare qnfcd mfoc ifdnfc 
+for lib in libnfc libfreefare qnfcd mfoc ifdnfc 
 do
 	tmpDir="${workingDir}/${baseDir}/${lib}"
 	if [[ ! -d ${tmpDir} ]]
