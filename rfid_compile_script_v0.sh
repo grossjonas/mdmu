@@ -10,21 +10,21 @@ echo "### libnfc ####################"
 cd "${myDir}/libnfc/"
 
 ## normal installation
-#autoreconf -vis && ./configure --prefix=/usr/local && make && sudo make install
+autoreconf -vis && ./configure --prefix=${myPrefix} && make && sudo make install
 ## with documentation
-#autoreconf -vis && ./configure --prefix=/usr/local --enable-doc && make && sudo make install
+#autoreconf -vis && ./configure --prefix=${myPrefix} --enable-doc && make && sudo make install
 ## with gdb
-#autoreconf -vis && CFLAGS="-g -Wall -pedantic -O0 -ggdb" ./configure --prefix=/usr/local && make clean all && sudo make install
+#autoreconf -vis && CFLAGS="-g -Wall -pedantic -O0 -ggdb" ./configure --prefix=${myPrefix} && make clean all && sudo make install
 ## with traces
-autoreconf -vis && ./configure --prefix=${myPrefix} --enable-debug --with-drivers='all' && make clean all && sudo make install
-#autoreconf -vis && ./configure --prefix=/usr/local --disable-debug && make && sudo make install
+#autoreconf -vis && ./configure --prefix=${myPrefix} --enable-debug --with-drivers='all' && make clean all && sudo make install
+#autoreconf -vis && ./configure --prefix=${myPrefix} --disable-debug && make && sudo make install
 
 cd ${myDir}
 
 echo "### libfreefare ####################"
 cd "${myDir}/libfreefare"
 
-#autoreconf -vis && ./configure --prefix=${myPrefix} && make && sudo make install
+autoreconf -vis && ./configure --prefix=${myPrefix} && make && sudo make install
 #autoreconf -vis && ./configure --prefix=${myPrefix} --enable-debug && make && sudo make install
 
 cd ${myDir}
