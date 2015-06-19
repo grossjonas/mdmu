@@ -1,6 +1,8 @@
 mdmu
 ====
 
+[![Join the chat at https://gitter.im/grossjonas/mdmu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/grossjonas/mdmu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 mdmu - A Mifare DESfire Manipulation Utility - From my own brain and no NDA - free your thoughts
 
 
