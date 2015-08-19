@@ -8,7 +8,7 @@ mkdir -p ${baseDir}
 cd "${workingDir}/${baseDir}"
 
 # TODO: mtools
-for lib in libnfc libfreefare qnfcd mfoc ifdnfc nfcutils libndef mfcuk
+for lib in libnfc libfreefare qnfcd mfoc ifdnfc nfcutils libndef mfcuk pam_nfc
 do
 	tmpDir="${workingDir}/${baseDir}/${lib}"
 	if [[ ! -d ${tmpDir} ]]

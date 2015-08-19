@@ -1,8 +1,8 @@
 #!/bin/bash
 
 myPrefix="/usr/local"
-myWorkingDir=`pwd`
-myNfcLibDir="nfclibs"
+myWorkingDir=$(pwd)
+myNfcLibDir="nfc-tools"
 myDir="${myWorkingDir}/${myNfcLibDir}/"
 echo ${myDir}
 
@@ -59,12 +59,13 @@ cd "${myDir}/mfoc"
 
 cd ${myDir}
 
-echo "### mtools ####################"
-cd "${myDir}/mtools/mtools"
+#TODO:
+#echo "### mtools ####################"
+#cd "${myDir}/mtools/mtools"
 
 #autoreconf -vis && ./configure --prefix=${myPrefix} && make && sudo make install
 
-cd ${myDir}
+#cd ${myDir}
 
 echo "### qnfcd ####################"
 cd "${myDir}/qnfcd"
@@ -73,13 +74,9 @@ cd "${myDir}/qnfcd"
 
 cd ${myDir}
 
-echo "#### nfc-tools ####################"
-
-cd nfc-tools
-
 echo "### nfcutils --------------------"
 
-cd "${myDir}/nfc-tools/nfcutils"
+cd "${myDir}/nfcutils"
 
 #autoreconf -vis && ./configure --prefix=${myPrefix}  && make && sudo make install
 #autoreconf -vis && ./configure --prefix=${myPrefix} --enable-debug && make && sudo make install
@@ -87,7 +84,7 @@ cd "${myDir}/nfc-tools/nfcutils"
 cd ${myDir}
 
 echo "### pam_nfc --------------------"
-cd "${myDir}/nfc-tools/pam_nfc"
+cd "${myDir}/pam_nfc"
 
 #autoreconf -vis && ./configure --prefix=${myPrefix} --sysconfdir=/etc --with-pam-dir=/usr/local/lib/security && make && sudo make install
 
@@ -95,32 +92,25 @@ cd ${myDir}
 
 echo "### nfc-eventd --------------------"
 
-cd "${myDir}/nfc-tools/nfc-eventd"
+cd "${myDir}/nfc-eventd"
 
 #autoreconf -vis && ./configure --prefix=${myPrefix}  && make && sudo make install
 #autoreconf -vis && ./configure --prefix=${myPrefix} --enable-debug && make && sudo make install
 
-cd "${myDir}/nfc-tools"
+#echo "### nfcd --------------------"
+#cd "${myDir}/nfcd"
 
-echo "### nfcd --------------------"
-cd "${myDir}/nfc-tools/nfcd"
-
-mkdir -p build 
-cd build/ 
+#mkdir -p build 
+#cd build/ 
 #cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local && make && sudo make install && sudo cp ../nfcd.conf /etc/dbus-1/system.d/ 
 #cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Debug && make && sudo make install && sudo cp ../nfcd.conf /etc/dbus-1/system.d/ 
-cd "${myDir}/nfc-tools/"
 
-echo "### desknfc --------------------"
-cd "${myDir}/nfc-tools/desknfc"
+#echo "### desknfc --------------------"
+#cd "${myDir}/nfc-tools/desknfc"
 
-mkdir -p build 
-cd build
+#mkdir -p build 
+#cd build
 #cmake .. -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` && make && sudo make install 
-cd ..
-cd ..
-
-
-
-
+#cd ..
+#cd ..
 

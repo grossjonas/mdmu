@@ -57,12 +57,12 @@ sudo xargs rm < install_manifest.txt
 cd ..
 cd ..
 
-echo "### desknfc --------------------"
-cd desknfc
-cd build
-sudo xargs rm < install_manifest.txt
-cd ..
-cd ..
+#echo "### desknfc --------------------"
+#cd desknfc
+#cd build
+#sudo xargs rm < install_manifest.txt
+#cd ..
+#cd ..
 
 echo "### mfoc --------------------"
 cd mfoc
